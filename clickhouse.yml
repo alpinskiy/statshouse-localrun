@@ -1,9 +1,0 @@
-version: "3.9"
-services:
-  clickhouse:
-    image: clickhouse/clickhouse-server:22.11
-    ports:
-      - 8123:8123
-      - 9000:9000
-    volumes:
-      - ${PWD}/clickhouse.sql:/docker-entrypoint-initdb.d/statshouse.sql
