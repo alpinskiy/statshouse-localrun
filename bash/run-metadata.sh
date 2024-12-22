@@ -13,4 +13,9 @@ BINLOG_PREFIX=$BINLOG_PATH/bl
 if [ -z "$(ls -A $BINLOG_PATH)" ]; then
   $SRC_DIR/target/statshouse-metadata -p 2442 --db-path "$DB_PATH" --binlog-prefix "$BINLOG_PREFIX" --create-binlog "0,1"
 fi
-$SRC_DIR/target/statshouse-metadata -p 2442 --db-path "$DB_PATH" --binlog-prefix "$BINLOG_PREFIX" "$@"
+
+$SRC_DIR/target/statshouse-metadata\
+ -p=2442\
+ --db-path="$DB_PATH"\
+ --binlog-prefix="$BINLOG_PREFIX"\
+ "$@"

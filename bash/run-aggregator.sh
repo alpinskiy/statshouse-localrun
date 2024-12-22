@@ -8,11 +8,10 @@ CACHE_DIR=$TMP_DIR/aggregator1
 
 mkdir -p $CACHE_DIR
 $SRC_DIR/target/statshouse --aggregator\
- --auto-create-default-namespace=1\
- --agg-addr=127.0.0.1:13336,127.0.0.1:13346,127.0.0.1:13356\
- --local-replica=1\
+ --auto-create\
+ --agg-addr=localhost:13336\
  --cluster=default\
- --kh=127.0.0.1:8123\
- --metadata-addr="127.0.0.1:2442"\
+ --kh=localhost:8123\
+ --metadata-addr=localhost:2442\
  --cache-dir="$CACHE_DIR"\
  "$@"

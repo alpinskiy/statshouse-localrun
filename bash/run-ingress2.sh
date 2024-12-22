@@ -8,10 +8,11 @@ SCRIPT_DIR=$ROOT_DIR/bash
 
 $SRC_DIR/target/statshouse ingress_proxy\
  --cluster=default\
- --hostname=ingress\
- --ingress-addr=127.0.0.1:13327\
- --agg-addr=127.0.0.1:13336,127.0.0.1:13346,127.0.0.1:13356\
- --ingress-external-addr=127.0.0.1:13327\
+ --hostname=ingress2\
+ --agg-addr="[::1]:13327,[::1]:13327,[::1]:13327"\
+ --ingress-addr-ipv6="[::1]:13317"\
+ --ingress-external-addr-ipv6="[::1]:13317"\
+ --aes-pwd-file="$SCRIPT_DIR/ingress_keys/key1.txt"\
  --ingress-pwd-dir="$SCRIPT_DIR/ingress_keys"\
  --ingress-version=2\
  "$@"
