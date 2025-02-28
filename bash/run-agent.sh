@@ -7,10 +7,11 @@ TMP_DIR=$ROOT_DIR/bash/tmp
 CACHE_DIR=$TMP_DIR/agent
 
 mkdir -p $CACHE_DIR
-$SRC_DIR/target/statshouse -agent\
+$SRC_DIR/target/statshouse agent\
+ --cores-udp=4\
  --cluster=default\
  --hostname=agent1\
- --hardware-metric-scrape-disable\
- --agg-addr=127.0.0.1:13336,127.0.0.1:13336,127.0.0.1:13336\
+ --hardware-metric-scrape-disable=1\
+ --agg-addr="127.0.0.1:13336,127.0.0.1:13336,127.0.0.1:13336"\
  --cache-dir="$CACHE_DIR"\
  "$@"

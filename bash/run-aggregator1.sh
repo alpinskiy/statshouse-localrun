@@ -7,7 +7,8 @@ TMP_DIR=$ROOT_DIR/bash/tmp
 CACHE_DIR=$TMP_DIR/aggregator1
 
 mkdir -p $CACHE_DIR
-$SRC_DIR/target/statshouse --aggregator\
+$SRC_DIR/target/statshouse-agg --aggregator\
+ --auto-create=1\
  --auto-create-default-namespace=1\
  --agg-addr=127.0.0.1:13336,127.0.0.1:13346,127.0.0.1:13356\
  --local-replica=1\

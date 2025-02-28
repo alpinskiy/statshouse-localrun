@@ -6,9 +6,8 @@ SRC_DIR=$ROOT_DIR/src
 TMP_DIR=$ROOT_DIR/bash/tmp
 SCRIPT_DIR=$ROOT_DIR/bash
 
-$SRC_DIR/target/statshouse ingress_proxy\
+SRC_DIR/target/statshouse-igp \
  --cluster=default\
- --hostname=ingress2\
  --agg-addr="[::1]:13327,[::1]:13327,[::1]:13327"\
  --ingress-addr-ipv6="[::1]:13317"\
  --ingress-external-addr-ipv6="[::1]:13317"\

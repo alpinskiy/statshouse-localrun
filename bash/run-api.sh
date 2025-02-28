@@ -8,7 +8,8 @@ CACHE_DIR=$TMP_DIR/api
 
 mkdir -p $CACHE_DIR
 $SRC_DIR/target/statshouse-api\
- --local-mode\
+ --local-mode=1\
+ --insecure-mode=1\
  --clickhouse-v1-addrs= --clickhouse-v2-addrs=localhost:9000\
  --listen-addr=localhost:10888\
  --static-dir=$SRC_DIR/statshouse-ui/build\
