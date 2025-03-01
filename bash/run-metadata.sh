@@ -2,8 +2,8 @@
 set -e
 
 ROOT_DIR=$(cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd)/..
-SRC_DIR=$ROOT_DIR/src
-TMP_DIR=$ROOT_DIR/bash/tmp
+SRC_DIR=$ROOT_DIR/../statshouse
+TMP_DIR=$ROOT_DIR/temp
 DB_DIR=$TMP_DIR/metadata
 DB_PATH=$DB_DIR/db
 BINLOG_PATH=$DB_DIR/binlog
